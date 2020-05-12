@@ -1,0 +1,12 @@
+{% extends 'posts/layout.html'%}
+
+{% block content %}
+{% csrf_token %}
+<h2 class = "red lighten-4 center-align container">Home</h2>
+<div class="container">
+	<div class="container header blue lighten-4">
+		To add new recipes click <a href="addrecipes"> <i class="fa fa-plus-circle"></i>	</a>
+	</div>
+</div>
+
+{% endblock %}

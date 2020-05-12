@@ -1,0 +1,18 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+<h2 class = "red lighten-4 center-align container">Recipes</h2>
+<div class="container">
+    {% for recipes in recipes  %}
+    <div class="container recipes blue lighten-4">
+        <h4><a href={{recipies.Slug}}>{{ recipes.Title }}</a></h4>
+        <p>{{ recipes.Category }}</p>
+        <p>{{ recipes.Date }}</p>
+        <p>{{ recipes.Ingredient }}</p>
+        <p>{{ recipes.Steps }} </p>
+        <img src=/images/{{recipies.Image}} alt="">
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

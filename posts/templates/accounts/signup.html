@@ -1,0 +1,37 @@
+{% extends 'accounts\base_layout.html' %}
+
+{% block content %}
+<style>
+.class1{
+  border: 1px solid #3a3a3a !important;
+  margin-bottom: 25px !important;
+  color: #3a3a3a;
+}
+.input-field{
+  place-content: "Username.."
+}
+</style>
+<div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr class="class1">
+</div>
+  <form method="post" class="container">
+    {% csrf_token %}
+    <p class="container">
+      <b>UserName :</b> <br>
+      {{ form.username }} <br>
+      <b>First Name :</b> <br>
+      {{ form.first_name }} <br>
+      <b>Last Name :</b> <br>
+      {{ form.last_name }} <br>
+      <b>Email :</b> <br>
+      {{ form.email }} <br>
+      <b>Password :</b> <br>
+      {{ form.password1 }} <br>
+      <b>Password Confirmation :</b> <br>
+      {{ form.password2 }} <br>
+    </p>
+    <button class="button" type="submit">Sign up</button>
+  </form>
+{% endblock %}

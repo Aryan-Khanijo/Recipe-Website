@@ -1,0 +1,72 @@
+{% extends 'posts/layout.html'%}
+
+{% block content %}
+<h2 class = "red lighten-4 center-align container">Timeline</h2>
+<div class="blue lighten-5 center-align container">
+    <div class="left-align">
+        <h5><b>Post #4</b></h5>
+        <h6><i><b>Dated:</b></i>23-Oct-2018</h6>
+        <i><b>Location:</b>Oustide Vivekananda Institute Professional Studies</i><br>
+        <button id="but4" class="mybtn-trans-black mybtn-trans" onclick="show('4','but4')">View Post</button>
+        <iframe class="none" id="4" frameborder="0" src="https://www.instagram.com/p/BpfLWk3Byy2/embed"></iframe>
+    </div>
+    <br>
+    <div class="left-align">
+        <h5><b>Post #3</b></h5>
+        <h6><i><b>Dated:</b></i>23-Oct-2018</h6>
+        <i><b>Location:</b>Oustide Vivekananda Institute Professional Studies</i><br>
+        <button id="but3" class="mybtn-trans-blue mybtn-trans" onclick="show('3','but3')">View Post</button>
+        <iframe class="none" id="3" frameborder="0" src="https://www.instagram.com/p/BpRNYGnh9QR/embed"></iframe>
+    </div>
+    <br>
+	<div class="left-align">
+        <h5><b>Post #2</b></h5>
+        <h6><i><b>Dated:</b></i>23-Oct-2018</h6>
+        <i><b>Location:</b>VIPS Canteen,Pitampura</i><br>
+        <button class="mybtn-trans-red mybtn-trans" id="but2" onclick="show('2','but2')">View Post</button><br>
+        <iframe id="2" class="none" frameborder="0" src="https://www.instagram.com/p/BpRK6RvhmZT/embed"></iframe>
+    </div>
+    <div class="left-align">
+        <h5><b>Post #1</b></h5>
+        <h6><i><b>Dated:</b></i>22-Oct-2018</h6>
+        <i><b>Location:</b>Wat-a-Burger,Rajouri Garden</i><br>
+        <button class="mybtn-trans-green mybtn-trans" id="but1" onclick="show('1','but1')">View Post</button><br>
+        <iframe id="1" class="none" frameborder="0" src="https://www.instagram.com/p/BpPkUZGB0k7/embed"></iframe>
+    </div>
+    <div class="left-align">
+        <h5><b>Start Date</b></h5>
+        <h6>22-Oct-2018</h6>
+    </div>
+</div>
+
+<style type="text/css">
+    .insta-container{
+        width: 100%;
+        height: 354px;
+    }
+    @media only screen and (min-width: 768px){
+        .insta-container{
+            width: 100%;
+            height: 800px;
+        }
+    }
+
+    .none{
+        width: 0px;
+        height: 0px;
+    }
+</style>
+
+<script type="text/javascript">
+	function show(iframe,button){
+		document.getElementById(iframe).setAttribute('class',"insta-container");
+		document.getElementById(button).innerHTML = "Hide Post";
+		document.getElementById(button).setAttribute('onclick',"hide('" + iframe + "','" + button + "')");
+	}
+	function hide(iframe,button){
+		document.getElementById(iframe).setAttribute('class',"none");
+		document.getElementById(button).innerHTML = "View Post";
+		document.getElementById(button).setAttribute('onclick',"show('" + iframe + "','" + button + "')");
+    }  
+</script>
+{% endblock %}
