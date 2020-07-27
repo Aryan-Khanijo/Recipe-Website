@@ -1,9 +1,0 @@
-Step 1:
-    > pip install virtualenvwrapper-win     #for windows
-    > pip install virtualenvwrapper         #for mac and linux
-
-Step 2:
-    > mkvirtualenv django
-
-Step 3:
-    > pip install django
