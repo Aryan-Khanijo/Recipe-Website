@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-purple.css"> -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Revived Devil Foodie</title>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="w3-container w3-theme w3-card">
+          <div class="nav-wrapper">
+            <a href="#home" class="brand-logo">Devil Foodie</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="/login/">Login</a></li>
+              <li><a href="/sign-up/">Sign-Up</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      {% block content %}
+
+      {% endblock %}
+</body>
+</html>

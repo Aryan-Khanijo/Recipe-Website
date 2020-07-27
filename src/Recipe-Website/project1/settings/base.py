@@ -10,12 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = # email id
-EMAIL_HOST_PASSWORD = # pass
-EMAIL_PORT = 587
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -39,13 +33,16 @@ LOGIN_REDIRECT_URL = 'home'
 # Application definition
 
 INSTALLED_APPS = [
-    'posts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'profile_api.apps.ProfileApiConfig',
+    'posts.apps.PostsConfig'
 ]
 
 MIDDLEWARE = [
@@ -82,12 +79,7 @@ WSGI_APPLICATION = 'project1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
 
 # DATABASES = {
 #     'default': {
