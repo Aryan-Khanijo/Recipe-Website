@@ -23,7 +23,12 @@ nav ul a{
 }
 
 .sidenav li>a{
-    color: rgba(255, 255, 255, 0.705) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    font-size: 14px;
+}
+
+.sidenav li>a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header{
@@ -42,10 +47,15 @@ nav ul a{
 
 .head{
     background-image: url("../media/main-background-new.jpg");
-    min-height: 750px;
+    min-height: 850px;
+    overflow-y: auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.sidenav-overlay{
+    visibility: hidden;
 }
 
 .flow-text{

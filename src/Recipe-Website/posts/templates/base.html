@@ -8,34 +8,26 @@
     <!-- CSS Libararies -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
     <!-- JS n JQuery Libararies -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-purple.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+    <script type="text/javascript">    
+        var App = angular.module('NewApp', ['ngMaterial']);
+        App.controller('AppCtrl', function($scope) {});
+    </script>
+    <!-- My Files  -->
     <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
     <script src="{% static 'js/base_script.js' %}"></script>
     <title>Revived Devil Foodie</title>
 </head>
-<body>
-    <div class="navbar-fixed">
-        <nav class="w3-container w3-theme w3-card">
-          <div class="nav-wrapper">
-            <a href="/" class="brand-logo">Devil Foodie</a>
-            <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="/login/">Login</a></li>
-              <li><a href="/sign-up/">Sign-Up</a></li>
-            </ul>
-          </div>
-        </nav>
-        <ul class="sidenav w3-theme" id="mobile">
-          <li><a href="/login/">Login</a></li>
-          <li><a href="/sign-up/">Sign-Up</a></li>
-        </ul>
-      </div>
-      {% block content %}
+<body ng-app="NewApp" ng-controller="AppCtrl">
+   
+    {% block content %}
 
-      {% endblock %}
+    {% endblock %}
 </body>
 </html>

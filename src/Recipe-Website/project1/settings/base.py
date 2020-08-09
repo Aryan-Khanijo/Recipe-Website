@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'rest_framework',
     # 'rest_registration',
     'rest_framework.authtoken',
-    # 'profile_api.apps.ProfileApiConfig',
     'posts.apps.PostsConfig'
 ]
 
@@ -104,6 +103,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Rest Registration
+# https://django-rest-registration.readthedocs.io/en/latest/quickstart.html
+
+REST_REGISTRATION = {
+    'REGISTER_VERIFICATION_ENABLED': False,
+    'REGISTER_EMAIL_VERIFICATION_ENABLED': False,
+    'RESET_PASSWORD_VERIFICATION_ENABLED': False,
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
