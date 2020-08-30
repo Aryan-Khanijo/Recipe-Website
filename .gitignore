@@ -127,4 +127,4 @@ dmypy.json
 .vscode/
 local.py
 production.py
-/migrations/
+api/

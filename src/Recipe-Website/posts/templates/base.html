@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- CSS Libararies -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
-    <!-- JS n JQuery Libararies -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- CSS Libararies -->
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+	<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-cyan.css"> -->
+	<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css"> -->
+	<!-- JS n JQuery Libararies -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
-    <script type="text/javascript">    
-        var App = angular.module('NewApp', ['ngMaterial']);
-        App.controller('AppCtrl', function($scope) {});
-    </script>
-    <!-- My Files  -->
-    <link rel="stylesheet" href="{% static 'css/base_style.css' %}">
-    <script src="{% static 'js/base_script.js' %}"></script>
-    <title>Revived Devil Foodie</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+	<!-- My Files  -->
+	<link rel="stylesheet" href="{% static 'css/base_style.css' %}">
+	<script src="{% static 'js/angularScript.js' %}"></script>
+	<script src="{% static 'js/base_script.js' %}"></script>
+	<title>Revived Devil Foodie</title>
+	{% block special_head %}{% endblock %}
 </head>
 <body ng-app="NewApp" ng-controller="AppCtrl">
-   
-    {% block content %}
+	<header flex="90" class="mynavbar w3-text-theme">
+		<a href="#" class="logo"> <span class="devil devil-light">Devil</span> Foodie</a>
+		<div class="menu-toggle"><i id="dropNav" class="material-icons">menu</i></div>
+		<nav id="navBar">
+			<ul id="navList">
+				<li><a href="#" class="active w3-theme">Home</a></li>
+				<li><a href="#" class="notactive">Sign-Up</a></li>
+				<li><a href="#" class="notactive">Login</a></li>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+	{% block content %}
 
-    {% endblock %}
+	{% endblock %}
 </body>
 </html>

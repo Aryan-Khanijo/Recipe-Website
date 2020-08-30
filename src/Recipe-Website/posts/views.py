@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import login, authenticate,logout
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
-from posts.models import Recipes
+# from posts.models import Recipes
 from posts import forms
 
 
