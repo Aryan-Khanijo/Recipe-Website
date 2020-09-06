@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 class Addrecipes(forms.ModelForm):
     class Meta:
         model = models.Recipes
-        fields = ['Title','Category','Ingredient','Steps','Image']
+        fields = ['Title','Category','Ingredient','Steps']
 
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=True, help_text='Required')

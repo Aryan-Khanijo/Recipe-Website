@@ -30,9 +30,9 @@ class Recipes(models.Model):
     
     Steps = models.TextField()
     
-    Image = models.ImageField(
-         default = "none.jpg"
-    )
+    # Image = models.ImageField(
+    #      default = "none.jpg"
+    # )
 
     Date = models.DateField(
         auto_now_add=True,
